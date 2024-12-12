@@ -748,6 +748,7 @@ a:focus {
 
 .client_section {
   color: #ffffff;
+  margin: 100px;
 }
 
 .client_section .heading_container {
@@ -1076,6 +1077,7 @@ html {
   scroll-behavior: smooth;
 }
 .announcements_section {
+  margin-top: 200px ;
   background-color: #f3b633;
   padding: 50px 0;
 }
@@ -1160,3 +1162,12 @@ html {
 /*# sourceMappingURL=style.css.map */
 
 
+.nav-link{
+  font-weight: bold;
+  margin-top: 50px ;
+}
+.nav-link:hover{
+  background-color: #f3b633;
+  border-radius: 12px;
+  padding: 10px 20px;
+}
