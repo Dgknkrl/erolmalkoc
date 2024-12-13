@@ -11,99 +11,175 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
 
   <!-- Fonts Style -->
-  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Dosis:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan&family=Dosis:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/navbar.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .hero-section {
+      background-image: url('images/bullboks.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      padding: 200px 0;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-section .btn-primary {
+      font-size: 1.2rem;
+      padding: 10px 30px;
+      border-radius: 50px;
+      transition: background-color 0.3s;
+    }
+
+    .hero-section .btn-primary:hover {
+      background-color: #0056b3;
+    }
+
+    .class-box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .class-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .class-box:hover {
+      transform: translateY(-10px);
+    }
+
+    .class-box-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .campaigns .p-4 {
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .campaigns .p-4:hover {
+      background-color: #f8f9fa;
+    }
+
+    .footer-section {
+      background-color: #212529;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .footer-section p {
+      margin: 0;
+    }
+
+    .sticky-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
 <body>
-<div class="hero_area">
-  <!-- Header Section -->
-  <header class="header_section">
-    <div class="container">
-      <div class="header_nav">
-        <a class="navbar-brand brand_desktop" href="index.html">
-          <img src="images/logo.png" alt="Boxer Center Logo" />
-        </a>
-        <div class="main_nav">
-          <!-- Top Nav -->
-          <div class="top_nav">
-            <ul>
-              <li><a href="#"><img src="images/telephone.png" alt="Telefon" /> <span>+905050036661</span></a></li>
-              <li><a href="#"><img src="images/mail.png" alt="Mail" /> <span>erolmalkoc04@gmail.com</span></a></li>
-              <li><a href="#"><img src="images/location.png" alt="Adres" /> <span>Gebze Sultan Orhan</span></a></li>
-            </ul>
-          </div>
-          <!-- Bottom Nav -->
-          <div class="bottom_nav">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
-              <a class="navbar-brand brand_mobile" href="index.html">
-                <img src="images/logo.png" alt="Boxer Center Logo" />
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">Hakkında</a></li>
-                  <li class="nav-item"><a class="nav-link" href="class.html">Sınıflar</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                </ul>
-                <form class="form-inline">
-                  <button class="btn nav_search-btn ml-3 ml-lg-5" type="submit"></button>
-                </form>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
+<!-- Header Section -->
+<header class="header_section">
+  <nav>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
     </div>
-  </header>
+    <div class="menu-toggle" onclick="toggleNavbar()">☰</div>
+</nav>
+<ul class="menu">
+  <li><a href="index.html">ANA SAYFA</a></li>
+  <li><a href="about.html">HAKKINDA</a></li>
+  <li class="sub_top">
+      <a href="class.html" onclick="toggleMenu('urunlerMenu')">ÜRÜNLERİMİZ</a>
+      <ul id="urunlerMenu" class="submenu">
+          <li><a href="#">Kick Boks</a></li>
+          <li><a href="#">Boks</a></li>
+          <li><a href="#">Muay Thai</a></li>
+      </ul>
+  </li>
+  <li><a href="mission-vision.html">MİSYON & VİZYON</a></li>
+  <li class="sub_top">
+      <a href="#" onclick="toggleMenu('birimlerMenu')">BİRİMLERİMİZ</a>
+      <ul id="birimlerMenu" class="submenu">
+          <li><a href="#">Eğitim Birimi</a></li>
+          <li><a href="#">Finans Birimi</a></li>
+          <li><a href="#">Destek Birimi</a></li>
+      </ul>
+  </li>
+  <li><a href="#">İLETİŞİM</a></li>
+</ul>
 
-  <!-- Hero Section -->
-  <section class="hero-section text-white text-center py-5" style="background: url('path-to-your-image.jpg') no-repeat center center; background-size: cover;">
-    <div class="container">
-      <h1>Sınıflar ve Özel Dersler</h1>
-      <p>Eğitmenlerimizden profesyonel eğitim alarak hedeflerinize ulaşın!</p>
-    </div>
-  </section>
-</div>
+</header>
 
-<!-- Class Details Section -->
-<section class="class-details py-5">
+<section class="hero-section">
+  <div class="container">
+    <h1>Sınıflar ve Özel Dersler</h1>
+    <p>Eğitmenlerimizden profesyonel eğitim alarak hedeflerinize ulaşın!</p>
+    <a href="#classes" class="btn btn-primary">Hemen Başla</a>
+  </div>
+</section>
+
+<section id="classes" class="class-details py-5">
   <div class="container">
     <h2 class="text-center mb-4">Sınıf Detayları</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="class-box">
-          <img src="https://via.placeholder.com/300x200?text=Boks" alt="Boks" />
+          <img src="images/boks.png" alt="Boks" />
           <div class="class-box-content">
             <h3>Boks</h3>
-            <p>Güç, hız ve dayanıklılık geliştiren özel boks dersleri.</p>
+            <p>Fiziksel ve zihinsel dayanıklılığınızı artırın.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="class-box">
-          <img src="https://via.placeholder.com/300x200?text=Kick+Boks" alt="Kick Boks" />
+          <img src="images/kickboks.png" alt="Kick Boks" />
           <div class="class-box-content">
             <h3>Kick Boks</h3>
-            <p>Hem vücut kontrolünü hem de dövüş tekniklerini geliştiren bir disiplin.</p>
+            <p>Vücut koordinasyonunuzu geliştirin.</p>
           </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="class-box">
-          <img src="https://via.placeholder.com/300x200?text=Muay+Thai" alt="Muay Thai" />
+          <img src="images/muaytahi.png" alt="Muay Thai" />
           <div class="class-box-content">
             <h3>Muay Thai</h3>
-            <p>Geleneksel dövüş sanatları ile modern tekniklerin birleşimi.</p>
+            <p>Tekniklerinizi ve stratejinizi güçlendirin.</p>
           </div>
         </div>
       </div>
@@ -111,35 +187,38 @@
   </div>
 </section>
 
-<!-- Campaigns Section -->
-<section class="campaigns bg-light py-5">
+<section id="campaigns" class="campaigns py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Devam Eden Kampanyalar</h2>
+    <h2 class="text-center mb-4">Kampanyalar</h2>
     <div class="row g-4">
-      <div class="col-md-6">
-        <div class="p-4 bg-white shadow">
-          <h4>İlk Ay Ücretsiz!</h4>
-          <p>Yeni üyeler için ilk ay ücretsiz deneme fırsatını kaçırmayın!</p>
+      <div class="col-md-4">
+        <div class="p-4 text-center bg-white shadow-sm">
+          <h3>İlk Ay Ücretsiz!</h3>
+          <p>Şimdi kaydolun, ilk ay ücretsiz başlayın.</p>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="p-4 bg-white shadow">
-          <h4>Aile İndirimi</h4>
-          <p>2 kişi ve üzeri aile üyeliklerinde %20 indirim.</p>
+      <div class="col-md-4">
+        <div class="p-4 text-center bg-white shadow-sm">
+          <h3>Aile İndirimi!</h3>
+          <p>İkinci ve sonraki üyeler için %20 indirim.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 text-center bg-white shadow-sm">
+          <h3>Özel Antrenmanlar</h3>
+          <p>Kişisel eğitimlerle hedeflerinize ulaşın.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer-section">
   <div class="container text-center">
-    <p>&copy; 2024 Boxer Center. Tüm hakları saklıdır.</p>
+    <p>&copy; 2024 Boxer Center. Tüm Hakları Saklıdır.</p>
   </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 
