@@ -1,75 +1,114 @@
-
-
 /* Footer Section */
 footer {
-    background-color: black;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+  background-color: black;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footer_container div {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+footer h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 2;
+}
+
+footer ul li a:hover {
+  color: #f3b633;
+}
+
+.image_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  filter: brightness(0) invert(1);
+  margin-top: 20px;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer_container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
   }
-  
-  footer .footer-content {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+
+  .image_footer {
+      gap: 15px;
   }
-  
-  footer .footer-column {
-    flex: 1;
-    min-width: 200px;
-  }
-  
+
   footer h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
+      font-size: 14px;
   }
-  
-  footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+
   footer ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 2;
+      font-size: 13px;
   }
-  
-  footer ul li a:hover {
-    color: #f3b633;
+}
+
+@media (max-width: 480px) {
+  footer {
+      padding: 30px 15px;
   }
-  
-  footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+
+  footer h4 {
+      font-size: 12px;
   }
-  
+
+  footer ul li a {
+      font-size: 12px;
+      line-height: 1.8;
+  }
+
   footer .social-icons img {
-    width: 30px;
-    height: 30px;
+      width: 25px;
+      height: 25px;
   }
-  
+
   footer p {
-    margin-top: 20px;
-    font-size: 12px;
+      font-size: 10px;
   }
-  
-  .footer_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    margin-bottom: 50px;
-  }
-  .image_footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    filter: brightness(0) invert(1);
-  }
+}

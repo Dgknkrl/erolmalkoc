@@ -14,8 +14,13 @@ ul,li,a{
     margin: 0px;
     color: black;
 }
-.header_section{
-    background-image: url(../images/thumb-1920-798026.jpg);
+*::selection{
+    background-color: #f9f9f9;
+    color: black;
+}
+.header_section,
+.header{
+
     border-radius: 20px;
     height: fit-content;
     margin: 10px;
@@ -23,7 +28,7 @@ ul,li,a{
 nav {
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    gap: 50px;
     align-items: flex-start;
     padding: 20px 30px; 
 }
@@ -81,8 +86,7 @@ nav {
         display: flex;
     }
     .menu li {
-        margin: 10px 0;
-        text-align: center;
+        text-align: left;
     }
     .menu-toggle {
         position: absolute;

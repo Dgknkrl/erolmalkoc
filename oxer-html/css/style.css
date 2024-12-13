@@ -68,22 +68,12 @@ body {
 /*header section*/
 .hero_area {
   height: 100vh;
-  background-image: url(../images/hero-bg.jpg);
+  background-image: url(../images/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-.hero_area::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(transparent), to(#63f74f));
-  background: linear-gradient(to bottom, transparent, transparent, #63f74f);
-}
 
 .sub_page .hero_area {
   height: auto;
@@ -93,25 +83,6 @@ body {
   top: 55%;
 }
 
-.header_section {
-  background-color: #ffffff;
-  position: relative;
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 28.5% 100%, 26.5% 86%, 0 84%, 0 0);
-          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 28.5% 100%, 26.5% 86%, 0 84%, 0 0);
-}
-
-.header_section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 62%;
-  height: 45px;
-  background: #080203;
-  z-index: 1;
-  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 8% 100%, 0 0);
-          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 8% 100%, 0 0);
-}
 
 .header_section .nav_container {
   margin: 0 auto;
@@ -1105,12 +1076,12 @@ html {
 
 .announcement-box h3 {
   font-size: 1.5rem;
-  color: #444;
+  color: white;
 }
 
 .announcement-box p {
   font-size: 1rem;
-  color: #666;
+  color: white;
 }
 
 .custom-modal {

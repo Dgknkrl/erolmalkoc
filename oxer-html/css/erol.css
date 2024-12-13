@@ -1,0 +1,356 @@
+*{
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+.slider_section .left{
+    font-size: 10rem;
+    transform: rotateZ(90deg);
+    position: absolute;
+    margin-left: 100px;
+}
+.xer, .bo{
+    font-weight: 700;
+    color: white;
+
+}
+.xer{
+    color: rgb(255, 0, 166);
+}
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .slide h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+  }
+
+  .slide img {
+    width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .btn-box a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    background-color: #ebcd25;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+
+  .btn-box a:hover {
+    background-color: #ebcd25;
+  }
+
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+  .control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 25px;
+  }
+
+  .control:focus {
+    outline: none;
+  }
+
+  .control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+/* Kampanya bölümü */
+
+.kampanya {
+    padding: 20px;
+    text-align: center;
+  }
+  h2, h3 {
+    color: #ebcd25;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    background-color: #111;
+    border: 1px solid #ebcd25;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+  .card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ebcd25;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .card button:hover {
+    background-color: #d1b020;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #ebcd25;
+  }
+  .close {
+    background-color: #ebcd25;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .close:hover {
+    background-color: #d1b020;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  /* Eğitmenler */
+  
+  .egitmenler {
+    padding: 20px;
+    text-align: center;
+}
+.teach_container {
+    max-width: 1200px;
+    margin: auto;
+}
+.teach_header h2 {
+    color: #ebcd25;
+    font-size: 2rem;
+}
+.teach_header p {
+    margin: 10px 0;
+    color: white;
+}
+.teach_slider {
+    overflow: hidden;
+    position: relative;
+}
+.teach_card_container {
+    margin-top: 100px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.teach_card {
+    flex: 0 0 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.teach_card img {
+    max-width: 150px;
+    border-radius: 50%;
+}
+.teach_card_content {
+    margin-top: 10px;
+}
+.teach_card_content h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #ebcd25;
+}
+.teach_card_content p {
+    font-size: 1rem;
+    max-width: 300px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .teach_card img {
+        max-width: 100px;
+    }
+    .teach_card_content h4 {
+        font-size: 1rem;
+    }
+    .teach_card_content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+.stats_box {
+    padding: 20px;
+    border: 1px solid #ebcd25;
+    border-radius: 8px;
+    background-color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: white;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .stats_box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stats_box h3 {
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .stats_box p {
+    font-size: 1rem;
+    margin: 0;
+    color: #555;
+  }
+
+  .text-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .stats_section{
+    margin: 100px 0px;
+  }
+
+
+.graphs{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0px;
+}
+  .chart-container {
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            height: 300px;
+            border-left: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+            position: relative;
+            padding: 20px;
+        }
+
+        .bar {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bar div {
+            width: 100%;
+            transition: height 0.3s ease;
+        }
+
+        .bar .boks {
+            background-color: rgba(255, 0, 0, 0.2);
+            border: 2px solid rgba(255, 0, 0, 0.7);
+            height: 160px;
+        }
+
+        .bar .kickboks {
+            background-color: rgba(0, 0, 255, 0.2);
+            border: 2px solid rgba(0, 0, 255, 0.7);
+            height: 120px;
+        }
+
+        .bar .muaythai {
+            background-color: rgba(255, 165, 0, 0.2);
+            border: 2px solid rgba(255, 165, 0, 0.7);
+            height: 200px;
+        }
+
+        .bar span {
+            margin-top: 10px;
+            font-size: 16px;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .chart {
+                height: 200px;
+            }
+
+            .bar span {
+                font-size: 14px;
+            }
+        }
